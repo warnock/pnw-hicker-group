@@ -1,3 +1,28 @@
-<p>
-  new-hike works!
-</p>
+<h3>Add a New Hike!</h3>
+<div>
+  <div>
+    <label>Name of Hike:</label>
+    <br>
+    <input class="form-control" #newHikeName>
+  </div>
+
+  <div>
+    <label>Hiker:</label>
+    <br>
+    <input class="form-control" #newAuthor>
+  </div>
+
+  <div>
+    <label>State:</label>
+    <br>
+    <input class="form-control" #newState>
+  </div>
+
+  <div>
+    <label>Coordinates:</label>
+    <br>
+    <input class="form-control" #newCoordinates>
+  </div>
+
+  <button (click)="submitForm(newHikeName.value, newAuthor.value, newState.value, newCoordinates.value); newHikeName.value=''; newAuthor.value=''; newState.value=''; newCoordinates.value=''">Get Hiking</button>
+</div>

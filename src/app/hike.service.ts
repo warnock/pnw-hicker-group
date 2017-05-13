@@ -17,4 +17,8 @@ export class HikeService {
    getHikeById(hikeId: string) {
      return this.database.object('hikes/' + hikeId);
    }
+
+   addHike(newHike: Hike) {
+     this.hikes.push(newHike);
+   }
 }
