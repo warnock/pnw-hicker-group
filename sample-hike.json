@@ -1,0 +1,20 @@
+{ "hikes": [{
+    "hikeName": "Dog Mountain Loop",
+    "author": "Megan",
+    "state": "Washington",
+    "coordinates": "45.69927, -121.70542"
+
+    }, {
+    "hikeName": "Oneonta Gorge",
+    "author": "Nina",
+    "state": "Oregon",
+    "coordinates": "45.5792° N, 122.0723° W"
+
+    }, {
+    "hikeName": "Upper Salmonberry River Trail",
+    "author": "Steve",
+    "state": "Oregon",
+    "coordinates": "45.69927, -121.70542"
+
+  }]
+}
