@@ -16,6 +16,7 @@ export class HikeListComponent implements OnInit {
   hikes: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
   selectedHike: null;
+  filteredByDifficulty: string = "difficulty";
 
   constructor(private hikeService: HikeService, private router: Router) {
     this.hikes = this.hikeService.getHikes();
@@ -33,6 +34,10 @@ export class HikeListComponent implements OnInit {
 
   finishedEditing() {
    this.selectedHike = null;
+  }
+
+  onChange(optionFromMenu) {
+    this.filteredByDifficulty = optionFromMenu;
   }
 
 }

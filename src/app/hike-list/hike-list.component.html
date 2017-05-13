@@ -1,9 +1,22 @@
-<div *ngFor="let hike of hikes | async"  class="panel panel-default">
+<div class="selectMenu">
+  <select (change)="onChange($event.target.value)">
+    <option value="all">All Levels</option>
+    <option value="easy">Easy</option>
+    <option value="moderate">Moderate</option>
+    <option value="difficult">Difficult</option>
+  </select>
+</div>
+
+
+
+
+<div *ngFor="let hike of hikes | async | difficulty:filteredByDifficulty"  class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(hike)"><em>{{hike.nameOfHike}}</em> by {{hike.author}}</h3>
     <div *ngIf="currentRoute === '/admin'">
       <p> State: {{hike.state}} </p>
       <p> Coordinates: {{hike.coordinates}} </p>
+      <p> Difficulty: {{hike.difficulty}} </p>
         <button (click)="showEditForm(hike)">Update</button>
         <div *ngIf="selectedHike === hike">
         <hr>

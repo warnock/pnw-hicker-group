@@ -17,8 +17,8 @@ export class NewHikeComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitForm(hikeName: string, author: string, state: string, coordinates: string) {
-    var newHike: Hike = new Hike(hikeName, author, state, coordinates);
+  submitForm(hikeName: string, author: string, state: string, coordinates: string, difficulty: string) {
+    var newHike: Hike = new Hike(hikeName, author, state, coordinates, difficulty);
     this.hikeService.addHike(newHike);
     this.router.navigate(['/hike-list']);
   }

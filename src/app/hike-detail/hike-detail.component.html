@@ -1,7 +1,8 @@
 
 <div>
-  <h3>{{(hikeToDisplay | async)?.hikeName}}</h3>
-  <h4>{{(hikeToDisplay | async)?.author}}</h4>
-  <p>{{(hikeToDisplay | async)?.state}}</p>
-  <p>{{(hikeToDisplay | async)?.coordinates}}</p>
+  <h3>Hike: {{(hikeToDisplay | async)?.hikeName}}</h3>
+  <h4>Hiker: {{(hikeToDisplay | async)?.author}}</h4>
+  <p>State: {{(hikeToDisplay | async)?.state}}</p>
+  <p>Coordinates: {{(hikeToDisplay | async)?.coordinates}}</p>
+  <p>Difficulty: {{(hikeToDisplay | async)?.difficulty}}</p>
 </div>

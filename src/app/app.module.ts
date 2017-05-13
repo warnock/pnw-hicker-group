@@ -15,6 +15,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { HikeDetailComponent } from './hike-detail/hike-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditHikeComponent } from './edit-hike/edit-hike.component';
+import { DifficultyPipe } from './difficulty.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -32,7 +33,8 @@ export const firebaseConfig = {
     HomeComponent,
     HikeDetailComponent,
     AdminComponent,
-    EditHikeComponent
+    EditHikeComponent,
+    DifficultyPipe
   ],
   imports: [
     BrowserModule,

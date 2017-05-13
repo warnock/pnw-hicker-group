@@ -24,5 +24,14 @@
     <input class="form-control" #newCoordinates>
   </div>
 
-  <button (click)="submitForm(newNameOfHike.value, newAuthor.value, newState.value, newCoordinates.value); newNameOfHike.value=''; newAuthor.value=''; newState.value=''; newCoordinates.value=''">Get Hiking</button>
+  <div>
+  <label>Difficulty:</label>
+  <select class="form-control" #newDifficulty>
+     <option value="easy"> Easy </option>
+     <option value="moderate"> Moderate </option>
+     <option value="difficult"> Difficult</option>
+  </select>
+  </div>
+
+  <button (click)="submitForm(newNameOfHike.value, newAuthor.value, newState.value, newCoordinates.value, newDifficulty.value); newNameOfHike.value=''; newAuthor.value=''; newState.value=''; newCoordinates.value=''; newDifficulty.value=''">Get Hiking</button>
 </div>
