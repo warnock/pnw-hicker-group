@@ -22,4 +22,9 @@ export class EditHikeComponent implements OnInit {
     this.editDoneSender.emit();
   }
 
+  beginDeletingHike(hikeToDelete){
+    if(confirm("Are you sure you want to delete this hike?")){
+      this.hikeService.deleteHike(hikeToDelete);
+    }
+  }
 }
