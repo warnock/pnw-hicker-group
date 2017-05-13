@@ -21,4 +21,12 @@ export class HikeService {
    addHike(newHike: Hike) {
      this.hikes.push(newHike);
    }
+
+   updateHike(localUpdateHike) {
+     var hikeEntryInFirebase = this.getHikeById(localUpdateHike.$key);
+     hikeEntryInFirebase.update({nameOfHike: localUpdateHike.nameOfHike,
+                                author: localUpdateHike.author,
+                                state: localUpdateHike.state,
+                                coordinates: localUpdateHike.coordinates})
+   }
 }

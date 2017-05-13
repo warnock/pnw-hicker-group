@@ -14,6 +14,8 @@ import { Router } from '@angular/router';
 })
 export class HikeListComponent implements OnInit {
   hikes: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
+  selectedHike: null;
 
   constructor(private hikeService: HikeService, private router: Router) {
     this.hikes = this.hikeService.getHikes();
@@ -25,4 +27,12 @@ export class HikeListComponent implements OnInit {
   goToDetailPage(clickedHike) {
     this.router.navigate(['hikes', clickedHike.$key]);
   }
+  showEditForm(hikeToEdit) {
+    this.selectedHike = hikeToEdit;
+  }
+
+  finishedEditing() {
+   this.selectedHike = null;
+  }
+
 }

@@ -1,5 +1,14 @@
 <div *ngFor="let hike of hikes | async"  class="panel panel-default">
   <div class="panel-body">
-    <h3 (click)="goToDetailPage(hike)"><em>{{hike.hikeName}}</em> by {{hike.author}}</h3>
+    <h3 (click)="goToDetailPage(hike)"><em>{{hike.nameOfHike}}</em> by {{hike.author}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      <p> State: {{hike.state}} </p>
+      <p> Coordinates: {{hike.coordinates}} </p>
+        <button (click)="showEditForm(hike)">Update</button>
+        <div *ngIf="selectedHike === hike">
+        <hr>
+        <app-edit-hike [selectedHike]="hike" (editDoneSender)=finishedEditing()></app-edit-hike>
+        </div>
+    </div>
   </div>
 </div>
