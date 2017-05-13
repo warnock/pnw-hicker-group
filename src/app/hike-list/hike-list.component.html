@@ -1,5 +1,5 @@
 <div *ngFor="let hike of hikes | async"  class="panel panel-default">
   <div class="panel-body">
-    <h3><em>{{hike.hikeName}}</em> by {{hike.author}}</h3>
+    <h3 (click)="goToDetailPage(hike)"><em>{{hike.hikeName}}</em> by {{hike.author}}</h3>
   </div>
 </div>

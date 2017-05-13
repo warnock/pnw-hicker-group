@@ -22,4 +22,7 @@ export class HikeListComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToDetailPage(clickedHike) {
+    this.router.navigate(['hikes', clickedHike.$key]);
+  }
 }
