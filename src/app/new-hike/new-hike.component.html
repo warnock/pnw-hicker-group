@@ -1,37 +1,39 @@
-<h3>Add a New Hike!</h3>
-<div>
+<div class="container">
+  <h3>Add a New Hike!</h3>
   <div>
-    <label>Name of Hike:</label>
-    <br>
-    <input class="form-control" #newNameOfHike>
-  </div>
+    <div>
+      <label>Name of Hike:</label>
+      <br>
+      <input class="form-control" #newNameOfHike>
+    </div>
 
-  <div>
-    <label>Hiker:</label>
-    <br>
-    <input class="form-control" #newAuthor>
-  </div>
+    <div>
+      <label>Hiker:</label>
+      <br>
+      <input class="form-control" #newAuthor>
+    </div>
 
-  <div>
-    <label>State:</label>
-    <br>
-    <input class="form-control" #newState>
-  </div>
+    <div>
+      <label>State:</label>
+      <br>
+      <input class="form-control" #newState>
+    </div>
 
-  <div>
-    <label>Coordinates:</label>
-    <br>
-    <input class="form-control" #newCoordinates>
-  </div>
+    <div>
+      <label>Coordinates:</label>
+      <br>
+      <input class="form-control" #newCoordinates>
+    </div>
 
-  <div>
-  <label>Difficulty:</label>
-  <select class="form-control" #newDifficulty>
-     <option value="easy"> Easy </option>
-     <option value="moderate"> Moderate </option>
-     <option value="difficult"> Difficult</option>
-  </select>
-  </div>
+    <div>
+    <label>Difficulty:</label>
+    <select class="form-control" #newDifficulty>
+       <option value="easy"> Easy </option>
+       <option value="moderate"> Moderate </option>
+       <option value="difficult"> Difficult</option>
+    </select>
+    </div>
 
-  <button (click)="submitForm(newNameOfHike.value, newAuthor.value, newState.value, newCoordinates.value, newDifficulty.value); newNameOfHike.value=''; newAuthor.value=''; newState.value=''; newCoordinates.value=''; newDifficulty.value=''">Get Hiking</button>
+    <button (click)="submitForm(newNameOfHike.value, newAuthor.value, newState.value, newCoordinates.value, newDifficulty.value); newNameOfHike.value=''; newAuthor.value=''; newState.value=''; newCoordinates.value=''; newDifficulty.value=''">Get Hiking</button>
+  </div>
 </div>
