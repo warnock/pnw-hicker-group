@@ -1,4 +1,4 @@
-## PNW Hickers Group
+## PNW Hikers Group
 
 #### _By Megan Warnock_
 
